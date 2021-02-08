@@ -4,10 +4,10 @@ In this repository, there are 4 projects:
 1. Vigenere Encryption:
   This project can encrypt and decrypt txt files by Vigenere Encryption.
   It also solve this problem:
-    Enter two short plaintexts of equal length and look for two secret keys.
-    so that the ciphertext obtained by encrypting the first plaintext with the first secret key is the same as the ciphertext obtained by encrypting the second plaintext with the second secret key. 
-    Output two secret keys and ciphertext. If such a secret key cannot be found, output "not found".
-    (Plaintext length≥2*key length, the lengths of the keys can be different)
+    1. Enter two short plaintexts of equal length and look for two secret keys.
+    2. so that the ciphertext obtained by encrypting the first plaintext with the first secret key is the same as the ciphertext obtained by encrypting the second plaintext with the second secret key. 
+    3. Output two secret keys and ciphertext. If such a secret key cannot be found, output "not found".
+    4. Plaintext length≥2*key length, the lengths of the keys can be different
     
 2. AES-128 Encryption:
   This project can encrypt and decrypt bmp files by Vigenere Encryption and AES-128 Encryption.
