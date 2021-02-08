@@ -14,21 +14,21 @@ In this repository, there are 4 projects:
   More details:
     1. The key length of the Vigenere cipher is 4-32 bytes, and the operation is performed in bytes. (Mod 256)
     2. AES-128 Encryption uses ECB mode.
-    3. High-level description of the Encryption algorithm
-        KeyExpansion – round keys are derived from the cipher key using the AES key schedule. AES requires a separate 128-bit round key block for each round plus one more.
-        Initial round key addition:
-        AddRoundKey – each byte of the state is combined with a byte of the round key using bitwise xor.
-        9, 11 or 13 rounds:
-        SubBytes – a non-linear substitution step where each byte is replaced with another according to a lookup table.
-        ShiftRows – a transposition step where the last three rows of the state are shifted cyclically a certain number of steps.
-        MixColumns – a linear mixing operation which operates on the columns of the state, combining the four bytes in each column.
-        AddRoundKey
-        Final round (making 10, 12 or 14 rounds in total):
-        SubBytes
-        ShiftRows
-        AddRoundKey
-    4. Optimization of the cipher
-        On systems with 32-bit or larger words, it is possible to speed up execution of this cipher by combining the SubBytes and ShiftRows steps with the MixColumns step by transforming them into a sequence of table lookups. 
+    3. High-level description of the Encryption algorithm  
+        KeyExpansion – round keys are derived from the cipher key using the AES key schedule. AES requires a separate 128-bit round key block for each round plus one more.  
+        Initial round key addition:  
+        AddRoundKey – each byte of the state is combined with a byte of the round key using bitwise xor.  
+        9, 11 or 13 rounds:  
+        SubBytes – a non-linear substitution step where each byte is replaced with another according to a lookup table.  
+        ShiftRows – a transposition step where the last three rows of the state are shifted cyclically a certain number of steps.  
+        MixColumns – a linear mixing operation which operates on the columns of the state, combining the four bytes in each column.  
+        AddRoundKey  
+        Final round (making 10, 12 or 14 rounds in total):  
+        SubBytes  
+        ShiftRows  
+        AddRoundKey  
+    4. Optimization of the cipher  
+       On systems with 32-bit or larger words, it is possible to speed up execution of this cipher by combining the SubBytes and ShiftRows steps with the MixColumns step by transforming them into a sequence of table lookups. 
 
 3. Berlekamp–Massey(BM) algorithm:
   This project achieves the task of finding the shortest linear feedback shift register (LFSR) for a given binary output sequence. It also finds the minimal polynomial of a linearly recurrent sequence in an arbitrary field.
